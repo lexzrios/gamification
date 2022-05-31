@@ -21,7 +21,7 @@ class LuckyNumberBadgeProcessorTest {
     }
 
     @Test
-    public void shouldGiveBadgeIfLuckyFactor() {
+    void shouldGiveBadgeIfLuckyFactor() {
         Optional<BadgeType> badgeType = badgeProcessor
             .processForOptionalBadge(10,
                 List.of(new ScoreCard(1L, 1L)),
@@ -30,7 +30,7 @@ class LuckyNumberBadgeProcessorTest {
     }
 
     @Test
-    public void shouldNotGiveBadgeIfNotLuckyFactor() {
+    void shouldNotGiveBadgeIfNotLuckyFactor() {
         Optional<BadgeType> badgeType = badgeProcessor
             .processForOptionalBadge(10,
                 List.of(new ScoreCard(1L, 1L)),

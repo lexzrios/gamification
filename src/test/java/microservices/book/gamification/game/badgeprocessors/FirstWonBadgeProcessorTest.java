@@ -20,7 +20,7 @@ class FirstWonBadgeProcessorTest {
     }
 
     @Test
-    public void shouldGiveBadgeIfFirstTime() {
+    void shouldGiveBadgeIfFirstTime() {
         Optional<BadgeType> badgeType = badgeProcessor
             .processForOptionalBadge(10,
                 List.of(new ScoreCard(1L, 1L)),
@@ -29,7 +29,7 @@ class FirstWonBadgeProcessorTest {
     }
 
     @Test
-    public void shouldNotGiveBadgeIfNotFirstTime() {
+    void shouldNotGiveBadgeIfNotFirstTime() {
         Optional<BadgeType> badgeType = badgeProcessor
             .processForOptionalBadge(20,
                 List.of(new ScoreCard(1L, 1L),

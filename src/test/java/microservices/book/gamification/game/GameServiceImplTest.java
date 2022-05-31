@@ -18,7 +18,7 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-public class GameServiceImplTest {
+class GameServiceImplTest {
 
     private GameServiceImpl gameService;
 
@@ -39,7 +39,7 @@ public class GameServiceImplTest {
     }
 
     @Test
-    public void processCorrectAttemptTest() {
+    void processCorrectAttemptTest() {
         // given
         long userId = 1L, attemptId = 10L;
         var attempt = new ChallengeSolvedDTO(attemptId, true, 20, 70, userId, "john");
@@ -70,7 +70,7 @@ public class GameServiceImplTest {
     }
 
     @Test
-    public void processWrongAttemptTest() {
+    void processWrongAttemptTest() {
         // when
         GameResult gameResult = gameService.newAttemptForUser(
             new ChallengeSolvedDTO(10L, false, 10, 10, 1L, "john")

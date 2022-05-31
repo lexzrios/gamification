@@ -16,7 +16,7 @@ import static org.assertj.core.api.BDDAssertions.then;
 import static org.mockito.BDDMockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class LeaderBoardServiceImplTest {
+class LeaderBoardServiceImplTest {
 
     private LeaderBoardServiceImpl leaderBoardService;
 
@@ -33,7 +33,7 @@ public class LeaderBoardServiceImplTest {
     }
 
     @Test
-    public void retrieveLeaderBoardTest() {
+    void retrieveLeaderBoardTest() {
         // given
         LeaderBoardRow scoreRow = new LeaderBoardRow(1L, 300L, List.of());
         given(scoreRepository.findFirst10()).willReturn(List.of(scoreRow));

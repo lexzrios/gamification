@@ -1,10 +1,10 @@
 package microservices.book.gamification.game;
+
 import java.util.List;
 import lombok.Value;
 import microservices.book.gamification.challenge.ChallengeSolvedDTO;
-import microservices.book.gamification.game.domain.BadgeCard;
 import microservices.book.gamification.game.domain.BadgeType;
-import microservices.book.gamification.game.domain.ScoreCard;
+
 public interface GameService {
     /**
      * Process a new attempt from a given user.
