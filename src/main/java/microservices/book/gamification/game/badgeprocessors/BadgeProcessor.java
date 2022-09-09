@@ -1,7 +1,7 @@
 package microservices.book.gamification.game.badgeprocessors;
 import java.util.List;
 import java.util.Optional;
-import microservices.book.gamification.challenge.ChallengeSolvedDTO;
+import microservices.book.gamification.challenge.ChallengeSolvedEvent;
 import microservices.book.gamification.game.domain.BadgeType;
 import microservices.book.gamification.game.domain.ScoreCard;
 public interface BadgeProcessor {
@@ -14,7 +14,7 @@ public interface BadgeProcessor {
     Optional<BadgeType> processForOptionalBadge(
         int currentScore,
         List<ScoreCard> scoreCardList,
-        ChallengeSolvedDTO solved);
+        ChallengeSolvedEvent solved);
     /**
      * @return the BadgeType object that this processor is handling. You can use
      * it to filter processors according to your needs.
